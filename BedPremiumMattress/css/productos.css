@@ -1,0 +1,151 @@
+/* Productos destacados */
+.featured-products {
+    padding: 50px 20px; /* Espaciado interno */
+    background: #f8f9fa; /* Fondo claro */
+    text-align: center; /* Centrado del texto */
+}
+
+.featured-products h2 {
+    font-size: 2.5em; /* Título grande */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 30px; /* Espaciado inferior */
+    color: #333; /* Texto oscuro */
+}
+
+/* Cuadrícula de productos */
+.product-grid {
+    display: grid; /* Configuración de cuadrícula */
+    gap: 20px; /* Espaciado entre productos */
+    grid-auto-rows: 1fr; /* Todas las filas tienen el mismo tamaño */
+}
+
+/* Escritorio: 4 columnas */
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr); /* Cuadrícula de 4 columnas */
+    }
+}
+
+/* Móvil: 2 columnas */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Cuadrícula de 2 columnas */
+    }
+}
+
+/* Tarjetas de producto */
+.product-card {
+    background: white; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta contenido que sobresale */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+    display: flex;
+    flex-direction: column; /* Contenido en columna */
+    justify-content: space-between; /* Distribución uniforme */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+/* Imagen del producto */
+.product-image img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: auto; /* Mantiene proporción */
+    object-fit: cover; /* Ajusta el tamaño de la imagen */
+    transition: transform 0.3s ease; /* Animación de la imagen */
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05); /* Zoom al pasar el ratón */
+}
+
+/* Contenido del producto */
+.product-content {
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrado del contenido */
+}
+
+.product-content h3 {
+    font-size: 1.5em; /* Tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+    color: #333; /* Texto oscuro */
+}
+
+.product-content .price {
+    font-size: 1.2em; /* Tamaño del precio */
+    font-weight: bold; /* Negrita */
+    color: #007bff; /* Azul */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Botón de acción */
+.btn-secondary {
+    padding: 10px 20px;
+    background: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    font-size: 1em; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Manito al pasar el ratón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: background 0.3s ease, transform 0.2s ease; /* Animación suave */
+    text-align: center; /* Centrado del texto */
+}
+
+.btn-secondary:hover {
+    background: #0056b3; /* Fondo más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .btn-secondary {
+        font-size: 0.9em; /* Texto un poco más pequeño en móvil */
+        padding: 8px 16px; /* Espaciado reducido */
+    }
+}
+
+
+
+
+
+
+
+/* Banner animado */
+.animated-banner {
+    position: relative;
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    width: 100%; /* Ocupa todo el ancho */
+    background: #ffcc00; /* Fondo amarillo llamativo */
+    color: #333; /* Texto oscuro */
+    padding: 15px 0; /* Espaciado interno */
+    font-size: 1.5em; /* Texto más grande */
+    font-weight: bold; /* Texto en negrita */
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente a Poppins */ /* Tipografía llamativa */
+    text-align: center; /* Centrado del texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+}
+
+.scrolling-text p {
+    white-space: nowrap; /* El texto no se divide en líneas */
+    display: inline-block; /* El texto se comporta como un bloque */
+    animation: scroll-left 20s linear infinite; /* Animación continua y lenta */
+}
+
+.scrolling-text p strong {
+    color: #006EE3; /* Resalta el código con rojo */
+}
+
+/* Animación del texto */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* El texto comienza fuera del lado derecho */
+    }
+    100% {
+        transform: translateX(-100%); /* El texto termina fuera del lado izquierdo */
+    }
+}
